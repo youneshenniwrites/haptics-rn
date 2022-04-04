@@ -7,12 +7,19 @@ import Reanimated, {
   interpolate,
 } from 'react-native-reanimated';
 
+interface Props {
+  isSelected: boolean;
+  onPress: () => void;
+  children: React.ReactNode;
+  isEnabled: boolean;
+}
+
 export const QuantityItem = ({
   isSelected,
   onPress,
   children,
   isEnabled,
-}: any) => {
+}: Props) => {
   const myVal = useSharedValue(isSelected ? 1 : 0);
 
   React.useEffect(() => {
