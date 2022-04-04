@@ -5,7 +5,6 @@ import {
   Text,
   View,
   Image,
-  Dimensions,
   ScrollView,
   Pressable,
   ActivityIndicator,
@@ -23,13 +22,11 @@ import Reanimated, {
 import { Audio } from 'expo-av';
 import { imageUrl } from './src/constants';
 import { QuantityItem } from './src/QuantityItem';
-import { wait } from './src/utils';
+import { wait, width } from './src/utils';
 
 const ReanimatedPressable = Reanimated.createAnimatedComponent(Pressable);
 
 const notificationSrc = require('./src/notification.wav');
-
-const { width } = Dimensions.get('window');
 
 export default function App() {
   const [isFavorite, setIsFavourite] = React.useState(false);
